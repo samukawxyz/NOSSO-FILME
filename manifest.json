@@ -1,0 +1,14 @@
+{
+  "name": "Entre Nós — Um filme sem fim",
+  "short_name": "Entre Nós",
+  "description": "Uma história de amor contada em capítulos.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#111014",
+  "theme_color": "#111014",
+  "icons": [
+    {"src":"icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"}
+  ]
+}

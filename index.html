@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111014">
+  <meta name="description" content="Uma história de amor contada em capítulos.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <title>Entre Nós — Um filme sem fim</title>
+  <style>
+    :root{--bg:#111014;--panel:#1b181d;--cream:#f1e6d7;--muted:#b9a99c;--wine:#783b4b;--gold:#c7a77a}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--cream);font-family:Georgia,'Times New Roman',serif}
+    button{font:inherit;cursor:pointer}
+    .grain:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;z-index:5;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E")}
+    .hero{min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:36px 22px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 78%,#542d3c 0%,#241923 38%,#111014 76%)}
+    .hero:after{content:"";position:absolute;inset:12px;border:1px solid #bda17b55;pointer-events:none}
+    .hero-inner{max-width:760px;position:relative;z-index:1}
+    .eyebrow{font:11px Arial,sans-serif;letter-spacing:.34em;text-transform:uppercase;color:var(--gold)}
+    h1{font-size:clamp(48px,11vw,100px);font-weight:400;line-height:.95;letter-spacing:-.04em;margin:28px 0 18px}
+    .subtitle{font:12px Arial,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+    .intro{font-size:18px;line-height:1.7;color:#e2d4c6;max-width:540px;margin:34px auto}
+    .primary{background:var(--cream);color:#20191b;border:0;padding:15px 25px;border-radius:2px;font:11px Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase}
+    .section{max-width:900px;margin:auto;padding:90px 24px}
+    .kicker{font:10px Arial,sans-serif;letter-spacing:.3em;color:var(--gold);text-transform:uppercase}
+    h2{font-size:clamp(34px,7vw,58px);font-weight:400;margin:14px 0 18px}
+    p{color:var(--muted);line-height:1.8;font-size:16px}
+    .chapter{border-top:1px solid #66515a;padding:27px 0;display:grid;grid-template-columns:90px 1fr;gap:20px;align-items:start}
+    .number{font-size:36px;color:var(--gold);font-style:italic}
+    .chapter h3{font-size:25px;font-weight:400;margin:0 0 8px}
+    .placeholder{height:240px;border:1px solid #6e5360;background:linear-gradient(135deg,#31232d,#60404b 55%,#17151a);display:flex;align-items:center;justify-content:center;text-align:center;color:#e8d8c8;padding:24px;margin:20px 0}
+    .placeholder small{display:block;font:10px Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;margin-top:10px;color:#d0bcae}
+    .secret{background:linear-gradient(135deg,#241a22,#17151a);border:1px solid #75515e;padding:26px;margin:18px 0}
+    .secret button{background:transparent;color:var(--cream);border:1px solid var(--gold);padding:12px 18px;font:10px Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase}
+    .hidden-message{display:none;margin-top:20px;color:var(--cream);font-size:19px;line-height:1.7}
+    .hidden-message.show{display:block;animation:fade .8s ease}
+    @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+    footer{text-align:center;padding:70px 24px 90px;border-top:1px solid #44343d;color:var(--muted)}
+    footer strong{display:block;color:var(--cream);font-size:28px;font-weight:400;margin:12px}
+    @media(min-width:700px){.section{padding-top:120px;padding-bottom:120px}.placeholder{height:390px}}
+  </style>
+</head>
+<body class="grain">
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Um filme sem data para terminar</div>
+      <h1>Entre<br><i>Nós</i></h1>
+      <div class="subtitle">Estrelando: nós dois · Desde novembro de 2024</div>
+      <p class="intro">Algumas histórias não começam com uma câmera ligada. Mas merecem ser lembradas como se o mundo inteiro estivesse assistindo.</p>
+      <button class="primary" onclick="document.querySelector('#historia').scrollIntoView({behavior:'smooth'})">Assistir à nossa história</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="historia">
+      <div class="kicker">Ato I · O início</div>
+      <h2>Onde tudo começou</h2>
+      <p>Novembro de 2024. Duas vidas seguindo seus próprios caminhos, sem saber tudo o que ainda estava por vir.</p>
+      <div class="placeholder">Sua primeira foto favorita de vocês<small>Substitua este espaço por uma fotografia</small></div>
+
+      <div class="chapter">
+        <div class="number">01</div>
+        <div><h3>O primeiro capítulo</h3><p>O começo da nossa história. Aqui entra como vocês se conheceram e o que você sentiu naquele momento.</p></div>
+      </div>
+      <div class="chapter">
+        <div class="number">02</div>
+        <div><h3>As cenas que ficaram</h3><p>Os passeios, as conversas, as risadas e os pequenos momentos que viraram lembranças enormes.</p></div>
+      </div>
+      <div class="chapter">
+        <div class="number">03</div>
+        <div><h3>O que ainda vamos viver</h3><p>Nem todas as cenas foram gravadas. Algumas ainda estão esperando por vocês.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="kicker">Arquivo de memórias</div>
+      <h2>Fragmentos de nós</h2>
+      <p>Este espaço vai reunir fotografias e vídeos reais de vocês. Depois podemos transformar cada lembrança em uma cena com estética de cinema.</p>
+      <div class="placeholder">Galeria de fotos e vídeos<small>Vamos adicionar suas mídias nesta etapa</small></div>
+    </section>
+
+    <section class="section">
+      <div class="kicker">Cenas secretas</div>
+      <h2>Nem tudo aparece de uma vez</h2>
+      <div class="secret">
+        <div class="kicker">Surpresa 01</div>
+        <h3>Uma mensagem guardada</h3>
+        <p>Existe algo que eu quero que você leia.</p>
+        <button onclick="reveal('surpresa1')">Desbloquear lembrança</button>
+        <div class="hidden-message" id="surpresa1">Meu lugar favorito não é uma cidade, uma praia ou qualquer cenário extraordinário. É onde posso dividir a vida com você. ❤️</div>
+      </div>
+      <div class="secret">
+        <div class="kicker">Cena pós-créditos</div>
+        <h3>O próximo capítulo ainda não foi escrito</h3>
+        <p>Uma última porta para abrir.</p>
+        <button onclick="reveal('surpresa2')">Abrir cena final</button>
+        <div class="hidden-message" id="surpresa2">Se a nossa história fosse um filme, eu não gostaria de saber o final. Gostaria apenas de continuar vivendo as próximas cenas ao seu lado.</div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="kicker">Fim desta sessão</div>
+    <strong>Mas não da nossa história.</strong>
+    <span>Feito com amor, por uma pessoa que escolhe você.</span>
+  </footer>
+  <script>
+    function reveal(id){document.getElementById(id).classList.add('show')}
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+    }
+  </script>
+</body>
+</html>
